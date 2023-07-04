@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<title>Voice Notes - Transcribe your Audio</title>
+	</head>
+	<body>
+    <div class="sticky-container sticky top-12 z-20">
+      <!-- Create the audio element and the buttons -->
+      <audio id="audio" controls class="w-full">
+        <source src="" type="audio/mpeg" />
+        Your browser does not support the audio element.
+	</audio>
+	<div class="flex justify-center mt-2 space-x-2">
+		<input type="file" id="fileInput" class="bg-blue-500 text-white p-2 m-4 px-4 py-3 rounded" accept="audio/*">
+        <span id="speedDisplay" class="bg-blue-500 text-white p-2 m-4  px-4 py-3 rounded-lg">1.00</span>
+        <button id="speedUp" class="bg-blue-500 text-white p-2 m-4 px-4 py-3 rounded">Ctrl+Alt+ArrowUp ➕</button>
+        <button id="speedDown" class="bg-blue-500 text-white p-2 m-4 px-4 py-3 rounded">Ctrl+Alt+ArrowUp ➖</button>
+        <button id="skipBackward" class="bg-blue-500 text-white p-2 m-4 px-4 py-3 rounded">Skip Backward ⏪</button>
+        <button id="skipForward" class="bg-blue-500 text-white p-2 m-4 px-4 py-3 rounded">Skip Forward ⏩</button>
+      </div>
+    </div>
+    <div class="flex justify-center mt-2 flex-wrap">
+		<h2 class="text-3xl font-bold">Transcribe</h2>
+		<div id="textarea" class="text-large w-full"></div>
+	</div>
+	<script type="module" src="/main.js"></script>
+	</body>
+</html>
+
+
